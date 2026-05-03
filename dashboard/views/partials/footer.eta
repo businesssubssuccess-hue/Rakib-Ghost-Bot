@@ -1,0 +1,30 @@
+</div>
+
+<footer style="background: linear-gradient(135deg,#0f0c29,#302b63,#24243e); color:#ccc; padding: 36px 0 18px; margin-top: 48px;">
+  <div class="container text-center">
+    <div style="margin-bottom:14px;">
+      <span style="font-size:1.5rem; font-weight:800; background:linear-gradient(90deg,#FA8BFF,#2BD2FF,#2BFF88); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">👻 Ghost Net Bot</span>
+    </div>
+    <p style="font-size:0.9rem; color:#aaa; margin-bottom:10px;">
+      GoatBot V2 — Ghost Net Edition &nbsp;|&nbsp; Prefix: <code style="color:#2BFF88;">.</code> &nbsp;|&nbsp; 558+ Commands
+    </p>
+    <div style="margin-bottom:14px;">
+      <a href="https://www.facebook.com/acs.rakib" target="_blank" style="color:#2BD2FF; text-decoration:none; margin:0 10px;">
+        <i class="fab fa-facebook fs-5"></i> Rakib Islam
+      </a>
+      <a href="https://www.facebook.com/acs.rakib" target="_blank" style="color:#FA8BFF; text-decoration:none; margin:0 10px;">
+        <i class="fab fa-facebook-messenger fs-5"></i> Message
+      </a>
+    </div>
+    <hr style="border-color:#444; margin: 12px 40px;">
+    <p style="font-size:0.8rem; color:#666; margin:0;">
+      &copy; <span id="footer-year"></span> Ghost Net Bot &mdash; Developed by <strong style="color:#FA8BFF;">Rakib Islam</strong> &mdash; All rights reserved
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

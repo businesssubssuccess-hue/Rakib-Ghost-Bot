@@ -1,0 +1,7 @@
+{
+  "name": "WS3 FCA",
+  "description": "ws3-fca by Sw3-Crew — modern, MQTT-based, fast",
+  "stability": "high",
+  "antiban": "medium",
+  "speed": "very fast"
+}

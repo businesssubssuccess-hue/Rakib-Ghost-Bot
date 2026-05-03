@@ -1,0 +1,53 @@
+node_modules
+fb-chat-api.dev
+obfcode.js
+minify.js
+backupOrigin.js
+createVersion.js
+createVersionAndCommit.js
+checkOriginCodeChanged.js
+*.zip
+*.dev.*
+*.rar
+*test.*
+*.test.*
+test.js
+
+# === SENSITIVE FILES — কখনই GitHub এ push হবে না ===
+account.txt
+account.txt.backup
+account.dev.txt
+*.cookie
+*.cookies
+.env
+.env.local
+.env.production
+secrets.json
+
+# Cache & temp
+database/data/*
+!database/data/.gitkeep
+.cache/
+.local/
+
+scripts/cmds/cache/*
+!scripts/cmds/cache/.gitkeep
+scripts/cmds/tmp/*
+!scripts/cmds/tmp/.gitkeep
+scripts/cmds/assets/guide
+!scripts/cmds/assets/guide/.gitkeep
+
+scripts/events/tmp/*
+scripts/events/data/leaveAttachment
+scripts/events/data/welcomeAttachment
+!scripts/events/tmp/.gitkeep
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+.DS_Store

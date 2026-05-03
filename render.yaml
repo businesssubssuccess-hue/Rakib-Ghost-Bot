@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ghost-net-bot
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_PORT
+        value: 8080
+      - key: NPM_CONFIG_PRODUCTION
+        value: false

@@ -1,0 +1,56 @@
+language = "nodejs"
+run = "npm start"
+modules = ["nodejs-20"]
+
+[[ports]]
+localPort = 1000
+externalPort = 3000
+
+[[ports]]
+localPort = 3001
+externalPort = 80
+
+[[ports]]
+localPort = 5173
+externalPort = 5173
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[nix]
+channel = "stable-25_05"
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "while true; do PORT=3001 npm start; echo '🔄 Restarting in 3s...'; sleep 3; done"
+waitForPort = 3001
+
+[userenv]
+
+[userenv.shared]
+GEMINI_API_KEY = "AIzaSyCDr5vHdaqFWqD_03U3AeoBQZmN7PEQGjk"
+AI_INTEGRATIONS_OPENAI_API_KEY = "_DUMMY_API_KEY_"
+AI_INTEGRATIONS_OPENAI_BASE_URL = "http://localhost:1106/modelfarm/openai"

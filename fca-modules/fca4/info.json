@@ -1,0 +1,7 @@
+{
+  "name": "👻 Rakib Custom FCA (Ghost Net)",
+  "description": "Built by Rakib — UA rotation + send throttle + anti-ban shield",
+  "stability": "high",
+  "antiban": "very high",
+  "speed": "slow (intentional, anti-ban)"
+}

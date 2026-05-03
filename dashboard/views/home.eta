@@ -1,0 +1,580 @@
+<%~ includeFile("partials/header.eta", { user: user }) %>
+<%~ includeFile("partials/message.eta") %>
+
+<style>
+  :root {
+    --gn-pink: #FA8BFF;
+    --gn-blue: #2BD2FF;
+    --gn-green: #2BFF88;
+    --gn-gold: #FFD700;
+  }
+
+  .gn-hero {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .gn-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(250,139,255,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(43,210,255,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 60% 80%, rgba(43,255,136,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .gn-title {
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--gn-pink), var(--gn-blue), var(--gn-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .gn-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #b8b8d0;
+    margin: 18px 0 28px;
+    max-width: 600px;
+    margin-left: auto; margin-right: auto;
+  }
+  .gn-badge {
+    display: inline-block;
+    background: rgba(43,210,255,0.15);
+    border: 1px solid rgba(43,210,255,0.35);
+    color: var(--gn-blue);
+    border-radius: 30px;
+    padding: 4px 18px;
+    font-size: 0.85rem;
+    margin: 4px;
+    font-weight: 600;
+  }
+  .gn-badge.pink { background: rgba(250,139,255,0.12); border-color: rgba(250,139,255,0.3); color: var(--gn-pink); }
+  .gn-badge.green { background: rgba(43,255,136,0.12); border-color: rgba(43,255,136,0.3); color: var(--gn-green); }
+  .gn-badge.gold { background: rgba(255,215,0,0.12); border-color: rgba(255,215,0,0.3); color: var(--gn-gold); }
+
+  .gn-btn {
+    display: inline-block;
+    padding: 12px 34px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    margin: 6px;
+  }
+  .gn-btn-primary {
+    background: linear-gradient(90deg, var(--gn-pink), var(--gn-blue));
+    color: #fff;
+    border: none;
+  }
+  .gn-btn-primary:hover { opacity: 0.88; transform: translateY(-2px); color: #fff; }
+  .gn-btn-outline {
+    border: 2px solid var(--gn-blue);
+    color: var(--gn-blue);
+    background: transparent;
+  }
+  .gn-btn-outline:hover { background: var(--gn-blue); color: #000; transform: translateY(-2px); }
+
+  .gn-status-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: #2BFF88;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse-dot 1.5s infinite;
+  }
+  @keyframes pulse-dot {
+    0%,100% { box-shadow: 0 0 0 0 rgba(43,255,136,0.5); }
+    50% { box-shadow: 0 0 0 7px rgba(43,255,136,0); }
+  }
+
+  .gn-section { padding: 64px 0; }
+  .gn-section-dark { background: rgba(0,0,0,0.25); }
+
+  .gn-section-title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--gn-pink), var(--gn-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  .gn-section-sub {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .gn-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 28px 22px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  .gn-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(43,210,255,0.35);
+    box-shadow: 0 12px 40px rgba(43,210,255,0.1);
+  }
+  .gn-card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+  }
+  .gn-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e8e8ff;
+    margin-bottom: 8px;
+  }
+  .gn-card-text { color: #888; font-size: 0.9rem; line-height: 1.6; }
+
+  .gn-stat-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .gn-stat-num {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--gn-blue), var(--gn-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .gn-stat-label { color: #888; font-size: 0.9rem; margin-top: 6px; }
+
+  .gn-owner-card {
+    background: linear-gradient(135deg, rgba(250,139,255,0.08), rgba(43,210,255,0.08));
+    border: 1px solid rgba(250,139,255,0.2);
+    border-radius: 20px;
+    padding: 36px;
+    text-align: center;
+  }
+  .gn-owner-avatar {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(#0f0c29, #0f0c29) padding-box,
+                linear-gradient(90deg, var(--gn-pink), var(--gn-blue)) border-box;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+  .gn-owner-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--gn-pink), var(--gn-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gn-cmd-category {
+    display: inline-block;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 6px;
+    text-align: center;
+    min-width: 130px;
+    transition: all 0.2s;
+  }
+  .gn-cmd-category:hover {
+    background: rgba(43,210,255,0.1);
+    border-color: var(--gn-blue);
+    transform: scale(1.04);
+  }
+  .gn-cmd-cat-icon { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+  .gn-cmd-cat-label { font-size: 0.82rem; color: #aaa; font-weight: 600; }
+
+  .gn-how-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .gn-step-num {
+    min-width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gn-pink), var(--gn-blue));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.1rem; color: #fff;
+    flex-shrink: 0;
+  }
+  .gn-step-content h5 { color: #e8e8ff; font-weight: 700; margin-bottom: 4px; }
+  .gn-step-content p { color: #888; font-size: 0.9rem; margin: 0; }
+
+  code.gn-code {
+    background: rgba(43,255,136,0.12);
+    color: var(--gn-green);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+  }
+</style>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="gn-hero">
+  <div style="position:relative; z-index:1; max-width: 800px;">
+    <div style="margin-bottom:20px;">
+      <span class="gn-badge gold">👻 Ghost Net Edition</span>
+      <span class="gn-badge green">
+        <span class="gn-status-dot"></span>
+        <% if (global.botID) { %>Online<% } else { %>Offline<% } %>
+      </span>
+      <span class="gn-badge pink">v2.0 Premium</span>
+    </div>
+
+    <h1 class="gn-title">Ghost Net Bot</h1>
+    <p class="gn-subtitle">
+      Powered by GoatBot V2 &mdash; Bangladesh's most powerful Facebook Messenger bot.<br>
+      <strong style="color:#e8e8ff;">558+ commands</strong>, Bengali + English, made with ❤️ by Rakib Islam.
+    </p>
+
+    <div style="margin-bottom: 28px;">
+      <span class="gn-badge">Prefix: <strong>.</strong></span>
+      <span class="gn-badge pink">Bengali 🇧🇩 + English</span>
+      <span class="gn-badge green">558+ Commands</span>
+      <span class="gn-badge">24/7 Active</span>
+    </div>
+
+    <div>
+      <% if (global.botID) { %>
+      <a href="#" id="addme-hero" class="gn-btn gn-btn-primary">
+        <i class="fab fa-facebook-messenger"></i> Add Bot to Group
+      </a>
+      <% } %>
+      <a href="/dashboard" class="gn-btn gn-btn-outline">
+        <i class="fas fa-cog"></i> Dashboard
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<section class="gn-section gn-section-dark">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3">
+        <div class="gn-stat-box">
+          <div class="gn-stat-num">558+</div>
+          <div class="gn-stat-label">📦 Total Commands</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gn-stat-box">
+          <div class="gn-stat-num"><%=global.db.allThreadData.length%></div>
+          <div class="gn-stat-label">💬 Active Groups</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gn-stat-box">
+          <div class="gn-stat-num"><%=global.db.allUserData.length%></div>
+          <div class="gn-stat-label">👥 Total Users</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gn-stat-box">
+          <div class="gn-stat-num">24/7</div>
+          <div class="gn-stat-label">⏰ Uptime</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURES ═══════════════ -->
+<section class="gn-section">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="gn-section-title">✨ Key Features</h2>
+      <p class="gn-section-sub">Everything you need in one powerful bot</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🤖</div>
+          <div class="gn-card-title">AI Powered</div>
+          <div class="gn-card-text">ChatGPT, Gemini, and multiple AI engines integrated. Ask anything, get smart answers instantly.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🎨</div>
+          <div class="gn-card-title">Image Editor</div>
+          <div class="gn-card-text">4K upscale, blur, dark, vignette, multi-layer text with 8 effects. Full creative control with <code class="gn-code">.editor</code></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🛡️</div>
+          <div class="gn-card-title">Group Management</div>
+          <div class="gn-card-text">Anti-spam, welcome messages, kick/ban, admin tools, automod — full group control at your fingertips.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🎵</div>
+          <div class="gn-card-title">Music & Media</div>
+          <div class="gn-card-text">Play music from YouTube, Spotify search, download videos, audio, lyrics and album art.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🇧🇩</div>
+          <div class="gn-card-title">Bengali Fun Commands</div>
+          <div class="gn-card-text">Gali deo, xdmu loop bomb, roast, love calculator, funny commands in pure Bangla — ghost net style!</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🔍</div>
+          <div class="gn-card-title">Info & Hack Tools</div>
+          <div class="gn-card-text">IP lookup, WHOIS, phone tracker, fake ID generator, network tools, spy commands and more.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🎮</div>
+          <div class="gn-card-title">Games & Economy</div>
+          <div class="gn-card-text">Bet coins, slots, blackjack, fishing, balance, daily rewards — full economy system inside groups.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">📈</div>
+          <div class="gn-card-title">Rank & XP System</div>
+          <div class="gn-card-text">Auto rank cards, level-up notifications, leaderboards. Members compete for top rank in groups.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="gn-card">
+          <div class="gn-card-icon">🧠</div>
+          <div class="gn-card-title">Auto Learn</div>
+          <div class="gn-card-text">Bot learns from conversations and remembers custom replies. Teach it anything with <code class="gn-code">.autolearn</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMMAND CATEGORIES ═══════════════ -->
+<section class="gn-section gn-section-dark">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="gn-section-title">📦 Command Categories</h2>
+      <p class="gn-section-sub">558+ commands across 20+ categories</p>
+    </div>
+    <div class="text-center">
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🤖</span>
+        <span class="gn-cmd-cat-label">AI / ChatGPT</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🎨</span>
+        <span class="gn-cmd-cat-label">Image Edit</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🎵</span>
+        <span class="gn-cmd-cat-label">Music</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🛡️</span>
+        <span class="gn-cmd-cat-label">Admin/Mod</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">💬</span>
+        <span class="gn-cmd-cat-label">Fun/Bangla</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🔍</span>
+        <span class="gn-cmd-cat-label">Info/Hack</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🎮</span>
+        <span class="gn-cmd-cat-label">Games</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">💰</span>
+        <span class="gn-cmd-cat-label">Economy</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">📊</span>
+        <span class="gn-cmd-cat-label">Rank/XP</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🌐</span>
+        <span class="gn-cmd-cat-label">Utility</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">📸</span>
+        <span class="gn-cmd-cat-label">Anime</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🧠</span>
+        <span class="gn-cmd-cat-label">AutoLearn</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🎭</span>
+        <span class="gn-cmd-cat-label">Roleplay</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">🔒</span>
+        <span class="gn-cmd-cat-label">18+ (Role:1)</span>
+      </div>
+      <div class="gn-cmd-category">
+        <span class="gn-cmd-cat-icon">📡</span>
+        <span class="gn-cmd-cat-label">Events</span>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/dashboard" class="gn-btn gn-btn-primary">
+        <i class="fas fa-list"></i> View All Commands
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW TO USE ═══════════════ -->
+<section class="gn-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <h2 class="gn-section-title">🚀 How to Use</h2>
+        <p class="gn-section-sub">3 simple steps to get started</p>
+
+        <div class="gn-how-step">
+          <div class="gn-step-num">1</div>
+          <div class="gn-step-content">
+            <h5>Add Bot to Your Group</h5>
+            <p>Click "Add Bot to Group" above or search the bot's Facebook ID and add it as a member.</p>
+          </div>
+        </div>
+        <div class="gn-how-step">
+          <div class="gn-step-num">2</div>
+          <div class="gn-step-content">
+            <h5>Use Prefix <code class="gn-code">.</code></h5>
+            <p>All commands start with a dot. Type <code class="gn-code">.help</code> to see all available commands.</p>
+          </div>
+        </div>
+        <div class="gn-how-step">
+          <div class="gn-step-num">3</div>
+          <div class="gn-step-content">
+            <h5>Manage via Dashboard</h5>
+            <p>Login here to customize welcome messages, rank system, and more for your groups.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:24px; font-family:monospace; font-size:0.88rem;">
+          <div style="color:#888; margin-bottom:12px;">💡 Quick Command Examples:</div>
+          <div style="color:#2BFF88; margin-bottom:8px;">. h e l p</div>
+          <div style="color:#aaa; margin-bottom:16px; padding-left:14px;">→ সব command এর list দেখো</div>
+
+          <div style="color:#2BFF88; margin-bottom:8px;">. a i  [question]</div>
+          <div style="color:#aaa; margin-bottom:16px; padding-left:14px;">→ AI কে যেকোনো কিছু জিজ্ঞেস করো</div>
+
+          <div style="color:#FA8BFF; margin-bottom:8px;">. e d i t o r  4k + dark:0.4 + text:Ghost Net + style:neon</div>
+          <div style="color:#aaa; margin-bottom:16px; padding-left:14px;">→ AI image editor — 4K + text + effects</div>
+
+          <div style="color:#FA8BFF; margin-bottom:8px;">. x d m u  @mention</div>
+          <div style="color:#aaa; margin-bottom:16px; padding-left:14px;">→ গালি দাও (100টা, 3s পর unsend)</div>
+
+          <div style="color:#2BD2FF; margin-bottom:8px;">. s i n g  [song name]</div>
+          <div style="color:#aaa; margin-bottom:16px; padding-left:14px;">→ গান বাজাও</div>
+
+          <div style="color:#FFD700; margin-bottom:8px;">. r a n k</div>
+          <div style="color:#aaa; margin-bottom:0; padding-left:14px;">→ তোমার rank card দেখো</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OWNER ═══════════════ -->
+<section class="gn-section gn-section-dark">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="gn-section-title">👑 Bot Owner & Developer</h2>
+      <p class="gn-section-sub">The person behind Ghost Net Bot</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="gn-owner-card">
+          <img
+            src="https://graph.facebook.com/61575436812912/picture?type=large&width=200&height=200"
+            alt="Rakib Islam"
+            class="gn-owner-avatar"
+            onerror="this.src='/images/logo.png'"
+          >
+          <div class="gn-owner-name">Rakib Islam</div>
+          <div style="color:#888; font-size:0.9rem; margin:6px 0 16px;">Acs Rákíb &bull; Ghost Net</div>
+
+          <div style="margin-bottom:18px;">
+            <span class="gn-badge gold">👑 Bot Owner</span>
+            <span class="gn-badge pink">Developer</span>
+            <span class="gn-badge green">Bangladesh 🇧🇩</span>
+          </div>
+
+          <p style="color:#888; font-size:0.88rem; margin-bottom:20px;">
+            Creator of Ghost Net Edition — custom GoatBot V2 with 558+ commands,
+            Bengali fun features, image editor, AI integration, and much more.
+          </p>
+
+          <a href="https://www.facebook.com/acs.rakib" target="_blank" class="gn-btn gn-btn-primary" style="font-size:0.9rem; padding:10px 26px;">
+            <i class="fab fa-facebook"></i> Facebook Profile
+          </a>
+          <a href="https://m.me/acs.rakib" target="_blank" class="gn-btn gn-btn-outline" style="font-size:0.9rem; padding:10px 26px;">
+            <i class="fab fa-facebook-messenger"></i> Message
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="gn-section" style="text-align:center; padding: 70px 20px;">
+  <div class="container">
+    <h2 style="font-size:clamp(1.8rem,4vw,3rem); font-weight:900; color:#e8e8ff; margin-bottom:12px;">
+      Ready to try Ghost Net Bot?
+    </h2>
+    <p style="color:#888; font-size:1.05rem; margin-bottom:28px; max-width:500px; margin-left:auto; margin-right:auto;">
+      Add it to your Facebook group now and unlock 558+ powerful commands — all free!
+    </p>
+    <div>
+      <% if (global.botID) { %>
+      <a href="#" id="addme-cta" class="gn-btn gn-btn-primary" style="font-size:1.05rem; padding:14px 40px;">
+        <i class="fab fa-facebook-messenger"></i> Add to Group — Free!
+      </a>
+      <% } %>
+      <a href="/dashboard" class="gn-btn gn-btn-outline" style="font-size:1.05rem; padding:14px 40px;">
+        <i class="fas fa-cog"></i> Open Dashboard
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const botID = "<%= global.botID %>";
+  const openBot = () => { if (botID) window.open("https://www.facebook.com/" + botID, "_blank"); };
+  const hero = document.getElementById('addme-hero');
+  const cta  = document.getElementById('addme-cta');
+  if (hero) hero.addEventListener('click', openBot);
+  if (cta)  cta.addEventListener('click', openBot);
+})();
+</script>
+
+<%~ includeFile('partials/footer.eta') %>

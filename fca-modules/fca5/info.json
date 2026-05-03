@@ -1,0 +1,7 @@
+{
+  "name": "🦊 Xaviabot FCA (Neokex GoatBot)",
+  "description": "@xaviabot/fca-unofficial — used in Neokex GoatBot V2, mobile UA, extra anti-detect patches",
+  "stability": "high",
+  "antiban": "high",
+  "speed": "medium"
+}
