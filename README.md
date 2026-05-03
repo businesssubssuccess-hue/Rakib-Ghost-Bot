@@ -1,51 +1,60 @@
-<div align="center">
-  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" alt="Ghost Net Banner" width="100%">
-  <h1 align="center">👻 GHOST NET V2 - Multipurpose Messenger Bot</h1>
-</div>
 <p align="center">
-  <a href="https://nodejs.org/dist/v16.20.0">
-    <img src="https://img.shields.io/badge/Nodejs%20Support-16.x-brightgreen.svg?style=flat-square" alt="Nodejs Support">
-  </a>
-  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/explainparves-sudo/Rakib-Ghost-Bot?style=flat-square&color=00FF41">
-  <img alt="Developer" src="https://img.shields.io/badge/Developer-Rakibul%20Hasan-black?style=flat-square&logo=github">
-  <img alt="Status" src="https://img.shields.io/badge/Status-Operational-brightgreen?style=flat-square">
+  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" width="100%" />
 </p>
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=WELCOME+TO+GHOST+NET;THE+MOST+POWERFUL+FB+BOT;DEVELOPED+BY+RAKIBUL+HASAN" alt="Typing SVG" />
-</div>
----
-## 💠 **Role System / ইউজার রোল সিস্টেম**
 
-| Role | Name (English) | নাম (বাংলা) | Details / বিস্তারিত |
-| :--- | :--- | :--- | :--- |
-| **4** | **System Developer** | **সিস্টেম ডেভেলপার** | Full control over the bot infrastructure. (Rakibul Hasan) |
-| **3** | **Bot Admin** | **বট এডমিন** | Access to all commands and configuration settings. |
-| **2** | **VIP User** | **ভিআইপি ইউজার** | Special access to premium AI and media tools. |
-| **1** | **Group Admin** | **গ্রুপ এডমিন** | Can manage group settings, welcome, and anti-out. |
-| **0** | **Regular User** | **সাধারণ ইউজার** | Access to all public entertainment commands. |
+<h1 align="center">✨ 𝐆𝐇𝐎𝐒𝐓 𝐍𝐄𝐓 𝐄𝐂𝐎𝐒𝐘𝐒𝐓𝐄𝐌 ✨</h1>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&duration=2000&pause=500&color=00F0FF&center=true&vCenter=true&width=850&lines=⚡+ADVANCED+MESSENGER+AUTOMATION;🧠+AI+INTEGRATED+ECOSYSTEM;🎨+VIZOEDIT+IMAGE+ENGINE;🚀+5000++POWERFUL+COMMANDS;🛡️+CYBER+SECURITY+PROTOCOL" />
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F0FF,100:8A2BE2&height=120&section=header"/>
+</p>
+
+<p align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=explainparves-sudo&theme=tokyonight&background=0a0a0a&ring=00F0FF&fire=00F0FF" width="48%" />
+<img src="https://github-readme-stats.vercel.app/api?username=explainparves-sudo&show_icons=true&theme=tokyonight&bg_color=0a0a0a&title_color=00F0FF&text_color=ffffff&border_color=00F0FF" width="48%" />
+</p>
 
 ---
-## ✨ **Core Features / মূল বৈশিষ্ট্যসমূহ**
-### 🤖 **Intelligence & Automation (এআই ও অটোমেশন)**
-- **Advanced AI Integration:** GPT-4, Bard, and specialized coding assistants.
-- **Auto-Reply:** Customizable triggers for group engagement.
-- **Spam Protection:** Keep your group clean from unwanted links and floods.
-### 🎥 **Multimedia Engine (মাল্টিমিডিয়া ইঞ্জিন)**
-- **Video Downloader:** TikTok (No Watermark), Facebook, YouTube, Instagram.
-- **Audio Converter:** Fast conversion of any video to high-quality MP3.
-- **ACS Image Branding:** Automatically add custom branding/logos to photos.
-### 🛠️ **System Management (সিস্টেম ম্যানেজমেন্ট)**
-- **Uptime Monitor:** Integrated script to keep the bot alive 24/7 on Replit.
-- **Log System:** Real-time tracking of every command and interaction.
-- **Modular Commands:** Easy to add or remove any of the 5000+ commands.
+
+## 💠 **AUTHORITY HIERARCHY (User Roles)**
+
+| Level | Rank | Responsibilities |
+| :--- | :--- | :--- |
+| **4** | 👑 **System Developer** | Full Infrastructure Control (Rakib Islam) |
+| **3** | 🛡️ **Bot Admin** | User Management & Command Overrides |
+| **2** | 💎 **Premium User** | No-Limit AI & High-Speed Media Access |
+| **1** | ⚔️ **Group Admin** | Automated Moderation & Group Security |
+| **0** | 👤 **Citizen** | General Engagement & Social Commands |
+
 ---
-## 📂 **Project Structure / প্রজেক্টের গঠন**
-```text
+
+## ✨ **GHOST NET CORE MODULES**
+
+### 🧠 **Neural Intelligence Center**
+- **Hybrid AI:** GPT-4, Gemini Pro, এবং কাস্টম কোডিং অ্যাসিস্ট্যান্টের সমন্বয়।
+- **Deep Conversations:** ন্যাচারাল ল্যাঙ্গুয়েজ প্রসেসিং এর মাধ্যমে উন্নত চ্যাটিং অভিজ্ঞতা।
+- **Task Automation:** শিডিউলারের মাধ্যমে অটোমেটিক মেসেজ এবং টাস্ক ম্যানেজমেন্ট।
+
+### 🎨 **VizoEdit Media Suite**
+- **ACS Branding:** প্রতিটি ইমেজে অটোমেটিক ব্র্যান্ডিং বা লোগো ইনজেকশন।
+- **Neural Image Gen:** প্রম্পট থেকে হাই-কোয়ালিটি ইমেজ জেনারেশন।
+- **Smart Editor:** অটোমেটিক ফিল্টার এবং ইমেজ ম্যানিপুলেশন টুলস।
+
+### 🎥 **Multimedia Forge**
+- **Multi-Source Downloader:** TikTok (No WM), FB Reels, YT Shorts, Insta 4K.
+- **Fast Audio Engine:** স্টুডিও কোয়ালিটি MP3 কনভার্সন এবং ভয়েস ইফেক্টস।
+
+---
+
+## 🛠️ **SYSTEM ARCHITECTURE**
+```bash
 GHOST-NET/
-├── 📁 scripts/
-│   ├── 📁 commands/       # ৫০০০+ সকল কমান্ড এখানে থাকে
-│   └── 📁 events/         # অটোমেটিক ইভেন্ট (Welcome, Leave)
-├── 📁 database/           # ইউজার ও গ্রুপ ডাটাবেস
-├── 📁 dashboard/          # ওয়েব কন্ট্রোল প্যানেল
-├── ⚙️ config.json          # মূল কনফিগারেশন ফাইল
-└── 🚀 index.js            # বট চালু করার মেইন ফাইল
+├── 📂 scripts/
+│   ├── 📂 commands/  # ৫০০০+ মডুলার স্ক্রিপ্ট ও টুলস
+│   └── 📂 events/    # ওয়েলকাম, লিভ এবং অটো-মডারেশন
+├── 📂 lib/           # কোর এপিআই এবং ক্যানভাস ইঞ্জিন
+├── 📂 database/      # হাই-স্পিড ইউজার ও গ্রুপ স্টোরেজ
+└── ⚙️ config.json     # গ্লোবাল সেটিংস ও প্রিফিক্স কন্ট্রোল
