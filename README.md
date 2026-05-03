@@ -1,65 +1,51 @@
 <div align="center">
-  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" alt="Ghost Net Bot Banner" width="100%">
-  <h1 align="center">👻 GHOST NET BOT - Multipurpose Messenger Bot</h1>
+  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" alt="Ghost Net Banner" width="100%">
+  <br>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=45&pause=1000&color=00FF41&center=true&vCenter=true&width=700&lines=⚡+GHOST+NET+SYSTEM+⚡;DARK+WEB+AESTHETICS;ADVANCED+MESSENGER+BOT;DEVELOPED+BY+RAKIBUL+HASAN" alt="Ghost Net Title" />
   <p align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&pause=1000&color=00FF41&center=true&vCenter=true&width=550&lines=GHOST+NET+Messenger+Bot;Designed+for+Scalability;Developed+by+Rakibul+Hasan;The+Power+of+Ghost+Net" alt="Typing SVG" />
+    <kbd><b>ESTABLISHED: 2026</b></kbd> | <kbd><b>VERSION: 2.0.4</b></kbd> | <kbd><b>STATUS: OPERATIONAL</b></kbd>
   </p>
-  
   <p align="center">
-    <img src="https://img.shields.io/badge/Maintained%3F-Yes-green.svg?style=flat-square" alt="Maintained" />
-    <img src="https://img.shields.io/badge/Language-Node.js-blue.svg?style=flat-square" alt="Language" />
-    <img src="https://img.shields.io/badge/Developer-Rakibul%20Hasan-black.svg?style=flat-square" alt="Developer" />
-    <img src="https://img.shields.io/github/repo-size/explainparves-sudo/Rakib-Ghost-Bot?style=flat-square&color=brightgreen&label=repo-size" alt="Repo Size" />
+    <img src="https://img.shields.io/github/stars/explainparves-sudo/Rakib-Ghost-Bot?style=for-the-badge&color=00FF41&logo=github" />
+    <img src="https://img.shields.io/github/forks/explainparves-sudo/Rakib-Ghost-Bot?style=for-the-badge&color=black&logo=git" />
+    <img src="https://img.shields.io/badge/Language-Node.JS-green?style=for-the-badge&logo=node.js" />
+    <img src="https://img.shields.io/badge/Mainframe-Active-00FF41?style=for-the-badge&logo=ghost" />
   </p>
-  
-  ---
-  
-  ### 🛠️ Developer Information
-  **Name:** Rakibul Hasan (explainparves-sudo)  
-  **Status:** Active, Customized Fork  
-  **Main Focus:** Security, Custom Commands, Uptime.
 </div>
 <hr>
-## 📌 Introduction
-Welcome to **GHOST NET BOT**. This is my personalized, heavily customized version of the powerful Messenger bot system. It is designed to run efficiently, providing utilities, amusement, and AI capabilities for you and your Facebook group chats.
-## 📝 Key Customizations in Ghost Net
-Compared to the original fork, this **Ghost Net** project focuses on:
-1.  **Unique Brand Identity:** Customized banner and branding for Rakibul Hasan.
-2.  **Optimized Command Set:** Focusing on features essential for efficient Messenger group management.
-3.  **Dedicated Uptime:** Configured for high availability on Replit, minimizing downtime.
-## 🚧 Prerequisites
-- **Node.js:** Supported on v16.x or higher.
-- **FB Chat API:** Utilizes the unofficial Facebook Chat API.
-## 💡 System Roles
-
-| Role | Badge | Permission Level | Details & Access |
-| :--- | :--- | :--- | :--- |
-| **4** | 👨‍💻 | **System Developer** | Full control over the bot, config, and system commands. (Default: Rakibul Hasan) |
-| **3** | 👤 | **Bot Administrator** | Can manage commands, configuration, and system events. |
-| **2** | 🪩 | **VIP Member** | Access to specialized VIP commands. |
-| **1** | 🎭 | **Group Moderator** | Manage group chats, ban users, and manage group-level events. |
-| **0** | 👥 | **Regular User** | Access to standard public commands. |
-
-## 🛠️ How to Connect with the Bot
-This is a Messenger bot using a personal account (clone is recommended) through an unofficial API. *I am not responsible for any problems that may arise from using this bot, such as account locks.* I use a self-hosted uptime checker to ensure my instance remains live.
-**Steps:**
-1.  **Clone the Repository.**
-2.  **Edit your config.**
-3.  **Ensure Replit has Node.js installed.**
-4.  **Set up an external uptime checker (e.g., UptimeRobot) to the provided endpoint.**
-## ✨ Core Technology
-- **Node.js v16.x**
-- **Unofficial Facebook Chat API**
+## 🌌 SYSTEM OVERVIEW
+**Ghost Net** shudhu ekta bot noy, eta ekta complete modular ecosystem. Facebook Messenger-er simaboddhota periye eta AI integration, automated media conversion, ebong heavy-duty group management provide kore. 
+> *"In the digital void, the Ghost Net captures everything."*
 ---
-<details>
-<summary><b>Common Tech Problems (Original GoatBot Documentation)</b></summary>
-<p>
-    The original problems provided by the project include fixes for:
-    - Error 400: redirect_uri_mismatch
-    - Error for site owners: Invalid domain for site key
-    - GaxiosError: invalid_grant, unauthorized_client
-    - GaxiosError: invalid_client
-    - Error 403: access_denied
-    (Refer to the main ntkhang03/Goat-Bot-V2 repository for detailed tutorials on these issues).
-</p>
-</details>
+## 🚀 KEY FEATURES
+
+| Feature | Description | Status |
+| :--- | :--- | :--- |
+| **AI Integration** | OpenAI & Custom AI models for smart chatting. | ✅ Online |
+| **Media Engine** | YouTube/TikTok/Facebook video to MP3/MP4 conversion. | ✅ Online |
+| **Security Core** | Anti-out, Anti-spam, and Automated Admin protection. | 🛡️ Active |
+| **ACS Branding** | Automated custom branding on photos using Jimp. | ✨ Active |
+| **Uptime Module** | 24/7 simulation script to prevent Replit sleep mode. | ⚡ Active |
+
+---
+## 👨‍💻 ARCHITECT & DEVELOPER
+<div align="left">
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=explainparves-sudo&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" width="400">
+  ### **Rakibul Hasan**
+  *Lead Software Developer & Network Specialist*
+  - 🛠️ **Expertise:** Node.js, Python, Termux Terminal.
+  - 🌐 **Projects:** Ghost Net, Movie Streaming Scrapers, Sales Automation.
+  - 📧 **Contact:** Available via GitHub Issue or Private Messenger.
+</div>
+<br clear="both">
+---
+## 🛠️ INSTALLATION & DEPLOYMENT
+Ghost Net-ke active korte nicher steps gulo follow korun:
+### 1. Environment Setup
+```bash
+# Repository clone korun
+git clone [https://github.com/explainparves-sudo/Rakib-Ghost-Bot.git](https://github.com/explainparves-sudo/Rakib-Ghost-Bot.git)
+# Directory-te probesh korun
+cd Rakib-Ghost-Bot
+# Dependency install korun
+npm install
