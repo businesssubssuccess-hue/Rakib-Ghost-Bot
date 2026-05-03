@@ -1,53 +1,51 @@
 <div align="center">
-  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" alt="GHOST-NET-BANNER" width="100%">
-  <br>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=50&pause=1000&color=00FF41&center=true&vCenter=true&width=800&lines=⚡+GHOST+NET+SYSTEM+⚡;PREMIUM+MESSENGER+ARCHITECTURE;DEVELOPED+BY+RAKIBUL+HASAN;5000++COMMANDS+INTEGRATED" alt="Typing SVG" />
-  <p align="center">
-    <img src="https://img.shields.io/badge/System-Operational-00FF41?style=for-the-badge&logo=ghost" />
-    <img src="https://img.shields.io/badge/Node.js-v16.x-blue?style=for-the-badge&logo=node.js" />
-    <img src="https://img.shields.io/badge/Security-Encrypted-red?style=for-the-badge&logo=fastly" />
-    <img src="https://img.shields.io/badge/Uptime-24/7-orange?style=for-the-badge" />
-  </p>
+  <img src="https://i.ibb.co.com/xSnfx47v/1777846653570.png" alt="Ghost Net Banner" width="100%">
+  <h1 align="center">👻 GHOST NET V2 - Multipurpose Messenger Bot</h1>
+</div>
+<p align="center">
+  <a href="https://nodejs.org/dist/v16.20.0">
+    <img src="https://img.shields.io/badge/Nodejs%20Support-16.x-brightgreen.svg?style=flat-square" alt="Nodejs Support">
+  </a>
+  <img alt="Repo Size" src="https://img.shields.io/github/repo-size/explainparves-sudo/Rakib-Ghost-Bot?style=flat-square&color=00FF41">
+  <img alt="Developer" src="https://img.shields.io/badge/Developer-Rakibul%20Hasan-black?style=flat-square&logo=github">
+  <img alt="Status" src="https://img.shields.io/badge/Status-Operational-brightgreen?style=flat-square">
+</p>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=WELCOME+TO+GHOST+NET;THE+MOST+POWERFUL+FB+BOT;DEVELOPED+BY+RAKIBUL+HASAN" alt="Typing SVG" />
 </div>
 ---
-## 🌌 **PROJECT ARCHITECTURE: GHOST NET**
-**Ghost Net** কোনো সাধারণ বট নয়। এটি একটি হাই-পারফরম্যান্স ইকোসিস্টেম যা মেসেঞ্জার অটোমেশনকে নেক্সট লেভেলে নিয়ে যায়। ৫০০০-এর বেশি স্ক্রিপ্ট এবং কমান্ডের সমন্বয়ে তৈরি এই বটটি একই সাথে বিনোদন, গ্রুপ ম্যানেজমেন্ট এবং এআই সার্ভিস প্রদান করে।
-### 🛠️ **CORE FEATURES & MODULES**
+## 💠 **Role System / ইউজার রোল সিস্টেম**
 
-| Category | Functionality | Complexity | Status |
+| Role | Name (English) | নাম (বাংলা) | Details / বিস্তারিত |
 | :--- | :--- | :--- | :--- |
-| **Artificial Intelligence** | GPT-4, Bard, & Custom AI Training | Ultra | 🟢 Active |
-| **Media Extraction** | TikTok, YT, FB (No Watermark) | High | 🟢 Active |
-| **Automated Security** | Anti-Out, Anti-Spam, Admin Shield | Extreme | 🛡️ Active |
-| **Image Processing** | ACS Branding with Jimp (Dark Green) | Pro | ✨ Active |
-| **Network Tools** | Router Admin, IP Lookup, Server Sim | Mid | 🟢 Active |
+| **4** | **System Developer** | **সিস্টেম ডেভেলপার** | Full control over the bot infrastructure. (Rakibul Hasan) |
+| **3** | **Bot Admin** | **বট এডমিন** | Access to all commands and configuration settings. |
+| **2** | **VIP User** | **ভিআইপি ইউজার** | Special access to premium AI and media tools. |
+| **1** | **Group Admin** | **গ্রুপ এডমিন** | Can manage group settings, welcome, and anti-out. |
+| **0** | **Regular User** | **সাধারণ ইউজার** | Access to all public entertainment commands. |
 
 ---
-## 👨‍💻 **THE ARCHITECT**
-<div align="left">
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=explainparves-sudo&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" width="420">
-  ### **Rakibul Hasan**
-  *Full Stack Developer | Bot Specialist | Ethical Thinker*
-  - 🚩 **Based in:** Bangladesh
-  - 🖥️ **Working on:** Messenger Frameworks (Node.js)
-  - ⚡ **Specialty:** Mobile-based development (Termux & Replit)
-  - 📂 **Current Repository:** `Rakib-Ghost-Bot`
-</div>
-<br clear="both">
+## ✨ **Core Features / মূল বৈশিষ্ট্যসমূহ**
+### 🤖 **Intelligence & Automation (এআই ও অটোমেশন)**
+- **Advanced AI Integration:** GPT-4, Bard, and specialized coding assistants.
+- **Auto-Reply:** Customizable triggers for group engagement.
+- **Spam Protection:** Keep your group clean from unwanted links and floods.
+### 🎥 **Multimedia Engine (মাল্টিমিডিয়া ইঞ্জিন)**
+- **Video Downloader:** TikTok (No Watermark), Facebook, YouTube, Instagram.
+- **Audio Converter:** Fast conversion of any video to high-quality MP3.
+- **ACS Image Branding:** Automatically add custom branding/logos to photos.
+### 🛠️ **System Management (সিস্টেম ম্যানেজমেন্ট)**
+- **Uptime Monitor:** Integrated script to keep the bot alive 24/7 on Replit.
+- **Log System:** Real-time tracking of every command and interaction.
+- **Modular Commands:** Easy to add or remove any of the 5000+ commands.
 ---
-## 📂 **MASSIVE DIRECTORY (5000+ FILES)**
-আপনার বটের বিশালতা বোঝানোর জন্য এই স্ট্রাকচারটি দেওয়া হলো:
+## 📂 **Project Structure / প্রজেক্টের গঠন**
 ```text
-GHOST-NET-CORE/
+GHOST-NET/
 ├── 📁 scripts/
-│   ├── 📁 commands/           # 5000+ JavaScript command files
-│   │   ├── 🛠️ admin/          # Control center scripts
-│   │   ├── 🎨 tools/          # Image and utility tools
-│   │   ├── 🎮 games/          # Interaction scripts
-│   │   └── 🤖 ai/             # Intelligence modules
-│   └── 📁 events/             # System triggers & loggers
-├── 📁 database/               # User and Group metadata
-├── 📁 login/                  # Appstate & Auth management
-├── 📁 dashboard/              # Web Interface files
-├── ⚙️ config.json              # Main system configuration
-└── 🚀 index.js                # Core engine starter
+│   ├── 📁 commands/       # ৫০০০+ সকল কমান্ড এখানে থাকে
+│   └── 📁 events/         # অটোমেটিক ইভেন্ট (Welcome, Leave)
+├── 📁 database/           # ইউজার ও গ্রুপ ডাটাবেস
+├── 📁 dashboard/          # ওয়েব কন্ট্রোল প্যানেল
+├── ⚙️ config.json          # মূল কনফিগারেশন ফাইল
+└── 🚀 index.js            # বট চালু করার মেইন ফাইল
