@@ -25,7 +25,8 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61575436812912"
+    "61575436812912",
+    "100091050051972"
   ],
   "developer": [
     "61575436812912",
@@ -37,7 +38,7 @@
   ],
   "reactBy": {
     "delete": [
-      "🗑️",
+      "🔪",
       "❌",
       "😠",
       "😡",
@@ -54,7 +55,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "Hínatà♡ Châñ  🌷",
-  "prefix": ".",
+  "prefix": ".","+","$"
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
